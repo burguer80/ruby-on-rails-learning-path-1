@@ -1,24 +1,15 @@
-# README
+# Action Plan
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Add Pokemons Controller `/pokemons`
+  - `/pokemons` all records
+  - `/pokemons/:id` record details
+- Add MyPokemons Controller `/my-pokemons` [Rails Docs](https://guides.rubyonrails.org/association_basics.html#the-has-and-belongs-to-many-association)
+  - `/my-pokemons` Add to user favorites
+  - Display user favorites records
+   ```
+  # User.rb
+  has_and_belongs_to_many :pokemons
+    
+  # Pokemon.rb
+  has_and_belongs_to_many :users
+  ```
